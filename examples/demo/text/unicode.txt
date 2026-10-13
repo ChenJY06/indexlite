@@ -1,0 +1,6 @@
+Unicode text and normalization
+
+Case-insensitive matching should handle Straße and STRASSE consistently.
+Composed café and decomposed café can represent the same word. Compatibility
+normalization also maps full-width characters such as ＡＢＣ to ABC. Hyphenated
+words such as first-in are separate tokens. Numbers such as 2026 remain tokens.

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indexlite"
+version = "0.1.0"
+description = "A compact document search engine with a custom inverted index and BM25"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["pypdf>=5,<7"]
+dev = ["pytest>=8.3,<9", "ruff>=0.11,<1", "pypdf>=5,<7"]
+bench = ["matplotlib>=3.9,<4"]
+
+[project.scripts]
+indexlite = "indexlite.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

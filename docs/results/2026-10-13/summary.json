@@ -1,0 +1,1039 @@
+{
+  "measured_at_utc": "2026-10-13T09:40:44.498511+00:00",
+  "seed": 1729,
+  "repetitions": 20,
+  "warmup": 3,
+  "top_k": 10,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "sqlite": "3.53.1",
+    "os": "Windows-11-10.0.26300-SP0",
+    "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "logical_cpus": 32,
+    "indexlite": "0.1.0",
+    "packages": {
+      "pytest": "8.4.2",
+      "ruff": "0.17.0",
+      "pypdf": "6.20.1",
+      "matplotlib": "3.11.2"
+    },
+    "unicode_database": "15.0.0"
+  },
+  "corpora": [
+    {
+      "characteristics": {
+        "documents": 1000,
+        "seed": 1729,
+        "min_length": 35,
+        "max_length": 166,
+        "average_length": 99.507,
+        "tokens": 99507,
+        "vocabulary_filler": 256,
+        "system_df": 1000,
+        "memory_df": 200,
+        "quasar_df": 1
+      },
+      "build": {
+        "documents": 1000,
+        "terms": 1259,
+        "postings": 79836,
+        "tokens": 99507,
+        "source_bytes": 794653,
+        "index_bytes": 3010560,
+        "average_length": 99.507,
+        "timings": {
+          "extraction": 12.029945799986308,
+          "tokenization": 0.06330730007903185,
+          "construction": 0.34661910007707775,
+          "validation": 0.10436789999948815,
+          "publication": 0.0003719000014825724,
+          "total": 12.871638799995708
+        },
+        "issues": []
+      },
+      "open_ms": 0.7251999995787628,
+      "reference_load_ms": 40.72050000104355,
+      "first_queries": [
+        {
+          "query": "quasar",
+          "open_ms": 2.7449999979580753,
+          "scoring_ms": 0.09190000128000975,
+          "formatting_ms": 0.12549999519251287
+        },
+        {
+          "query": "system",
+          "open_ms": 0.6715999988955446,
+          "scoring_ms": 2.9529999956139363,
+          "formatting_ms": 1.1166999975102954
+        },
+        {
+          "query": "memory",
+          "open_ms": 0.7780999949318357,
+          "scoring_ms": 1.6386999996029772,
+          "formatting_ms": 0.7024000005912967
+        },
+        {
+          "query": "quasar memory",
+          "open_ms": 0.7544000036432408,
+          "scoring_ms": 1.4933999991626479,
+          "formatting_ms": 0.7102999952621758
+        },
+        {
+          "query": "term000 term001",
+          "open_ms": 0.738499998988118,
+          "scoring_ms": 3.183999993780162,
+          "formatting_ms": 1.8706999981077388
+        },
+        {
+          "query": "doc000000",
+          "open_ms": 0.7901999997557141,
+          "scoring_ms": 0.08199999865610152,
+          "formatting_ms": 0.11889999586855993
+        },
+        {
+          "query": "missingtoken",
+          "open_ms": 0.6681000013486482,
+          "scoring_ms": 0.024100001610349864,
+          "formatting_ms": 0.000400003045797348
+        },
+        {
+          "query": "system quasar",
+          "open_ms": 0.6270999947446398,
+          "scoring_ms": 3.4203000031993724,
+          "formatting_ms": 0.8239000017056242
+        }
+      ],
+      "queries": [
+        {
+          "query": "quasar",
+          "candidates": 1,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.019250004697823897,
+            "p95": 0.03229999856557697
+          },
+          "formatting_ms": {
+            "median": 0.09550000322633423,
+            "p95": 0.12689999857684597
+          },
+          "indexed_total_ms": {
+            "median": 0.11594999887165613,
+            "p95": 0.16200000391108915
+          },
+          "reference_ms": {
+            "median": 0.167199999850709,
+            "p95": 0.214299994695466
+          },
+          "scoring_speedup": 8.685712158273395
+        },
+        {
+          "query": "system",
+          "candidates": 1000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 1.463500000681961,
+            "p95": 1.6784999970695935
+          },
+          "formatting_ms": {
+            "median": 0.7310500004678033,
+            "p95": 0.8061000044108368
+          },
+          "indexed_total_ms": {
+            "median": 2.2038000024622306,
+            "p95": 2.6122000053874217
+          },
+          "reference_ms": {
+            "median": 1.009299998258939,
+            "p95": 1.4081999979680404
+          },
+          "scoring_speedup": 0.6896481023495906
+        },
+        {
+          "query": "memory",
+          "candidates": 200,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.347099998180056,
+            "p95": 0.4552999962470494
+          },
+          "formatting_ms": {
+            "median": 0.6500499985122588,
+            "p95": 0.8323000001837499
+          },
+          "indexed_total_ms": {
+            "median": 1.0014500003308058,
+            "p95": 1.2465999971027486
+          },
+          "reference_ms": {
+            "median": 0.34079999750247225,
+            "p95": 0.4426000014063902
+          },
+          "scoring_speedup": 0.9818496090157982
+        },
+        {
+          "query": "quasar memory",
+          "candidates": 200,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.35134999779984355,
+            "p95": 0.4549999939627014
+          },
+          "formatting_ms": {
+            "median": 0.6726000028720591,
+            "p95": 0.8432000031461939
+          },
+          "indexed_total_ms": {
+            "median": 1.0323000024072826,
+            "p95": 1.2867999976151623
+          },
+          "reference_ms": {
+            "median": 0.4199499999231193,
+            "p95": 0.4569000011542812
+          },
+          "scoring_speedup": 1.195246912061618
+        },
+        {
+          "query": "term000 term001",
+          "candidates": 498,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.9707500030344818,
+            "p95": 1.2929000004078262
+          },
+          "formatting_ms": {
+            "median": 1.5180999980657361,
+            "p95": 1.7471999963163398
+          },
+          "indexed_total_ms": {
+            "median": 2.491599996574223,
+            "p95": 3.0448000034084544
+          },
+          "reference_ms": {
+            "median": 0.76949999856879,
+            "p95": 1.0007000018958934
+          },
+          "scoring_speedup": 0.7926860635213996
+        },
+        {
+          "query": "doc000000",
+          "candidates": 1,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.018399998225504532,
+            "p95": 0.02600000152597204
+          },
+          "formatting_ms": {
+            "median": 0.09130000034929253,
+            "p95": 0.13580000086221844
+          },
+          "indexed_total_ms": {
+            "median": 0.11214999540243298,
+            "p95": 0.16280000272672623
+          },
+          "reference_ms": {
+            "median": 0.14630000077886507,
+            "p95": 0.2578999992692843
+          },
+          "scoring_speedup": 7.951087765654036
+        },
+        {
+          "query": "missingtoken",
+          "candidates": 0,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.006650003342656419,
+            "p95": 0.013800003216601908
+          },
+          "formatting_ms": {
+            "median": 0.0002999986463692039,
+            "p95": 0.000400003045797348
+          },
+          "indexed_total_ms": {
+            "median": 0.008300001354655251,
+            "p95": 0.0168999977177009
+          },
+          "reference_ms": {
+            "median": 0.13704999946639873,
+            "p95": 0.22959999478189275
+          },
+          "scoring_speedup": 20.609012116925125
+        },
+        {
+          "query": "system quasar",
+          "candidates": 1000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 1.4755999982298817,
+            "p95": 1.6963000016403385
+          },
+          "formatting_ms": {
+            "median": 0.7542999992438126,
+            "p95": 0.8575999963795766
+          },
+          "indexed_total_ms": {
+            "median": 2.2525499989569653,
+            "p95": 2.5033000056282617
+          },
+          "reference_ms": {
+            "median": 1.1262500011071097,
+            "p95": 1.5096999995876104
+          },
+          "scoring_speedup": 0.7632488495921324
+        }
+      ],
+      "documents_per_second": 77.6901850291459,
+      "name": "synthetic-1000"
+    },
+    {
+      "characteristics": {
+        "documents": 10000,
+        "seed": 1729,
+        "min_length": 35,
+        "max_length": 167,
+        "average_length": 99.962,
+        "tokens": 999620,
+        "vocabulary_filler": 256,
+        "system_df": 10000,
+        "memory_df": 2000,
+        "quasar_df": 10
+      },
+      "build": {
+        "documents": 10000,
+        "terms": 10259,
+        "postings": 802004,
+        "tokens": 999620,
+        "source_bytes": 7982930,
+        "index_bytes": 30289920,
+        "average_length": 99.962,
+        "timings": {
+          "extraction": 115.47807029962132,
+          "tokenization": 0.6594407000229694,
+          "construction": 4.629658299716539,
+          "validation": 5.086079200002132,
+          "publication": 0.02453879999666242,
+          "total": 129.56978309999977
+        },
+        "issues": []
+      },
+      "open_ms": 0.8973000003607012,
+      "reference_load_ms": 505.85669999418315,
+      "first_queries": [
+        {
+          "query": "quasar",
+          "open_ms": 3.0416000008699484,
+          "scoring_ms": 0.2297000028192997,
+          "formatting_ms": 2.0803000006708317
+        },
+        {
+          "query": "system",
+          "open_ms": 0.8414000039920211,
+          "scoring_ms": 28.028799999447074,
+          "formatting_ms": 0.9185000017168932
+        },
+        {
+          "query": "memory",
+          "open_ms": 0.8568999983253889,
+          "scoring_ms": 12.614399995072745,
+          "formatting_ms": 0.9030000001075678
+        },
+        {
+          "query": "quasar memory",
+          "open_ms": 0.9027000050991774,
+          "scoring_ms": 11.83360000140965,
+          "formatting_ms": 1.8856999959098175
+        },
+        {
+          "query": "term000 term001",
+          "open_ms": 0.875699995958712,
+          "scoring_ms": 27.26029999757884,
+          "formatting_ms": 1.7701000033412129
+        },
+        {
+          "query": "doc000000",
+          "open_ms": 1.028099999530241,
+          "scoring_ms": 0.09599999611964449,
+          "formatting_ms": 0.11169999925186858
+        },
+        {
+          "query": "missingtoken",
+          "open_ms": 0.7217999955173582,
+          "scoring_ms": 0.030499999411404133,
+          "formatting_ms": 0.000400003045797348
+        },
+        {
+          "query": "system quasar",
+          "open_ms": 0.7734999962849542,
+          "scoring_ms": 27.346599999873433,
+          "formatting_ms": 2.20130000525387
+        }
+      ],
+      "queries": [
+        {
+          "query": "quasar",
+          "candidates": 10,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.1112000027205795,
+            "p95": 0.18940000154543668
+          },
+          "formatting_ms": {
+            "median": 1.6252999957941938,
+            "p95": 1.8648000041139312
+          },
+          "indexed_total_ms": {
+            "median": 1.7585499954293482,
+            "p95": 1.9556999977794476
+          },
+          "reference_ms": {
+            "median": 2.579899999545887,
+            "p95": 3.132099998765625
+          },
+          "scoring_speedup": 23.20053899664547
+        },
+        {
+          "query": "system",
+          "candidates": 10000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 22.892599998158403,
+            "p95": 25.833899999270216
+          },
+          "formatting_ms": {
+            "median": 0.757250003516674,
+            "p95": 0.9499000007053837
+          },
+          "indexed_total_ms": {
+            "median": 23.73674999762443,
+            "p95": 26.673499996832106
+          },
+          "reference_ms": {
+            "median": 13.210950000939192,
+            "p95": 14.655200000561308
+          },
+          "scoring_speedup": 0.5770838612478245
+        },
+        {
+          "query": "memory",
+          "candidates": 2000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 10.110700000950601,
+            "p95": 10.94320000265725
+          },
+          "formatting_ms": {
+            "median": 0.7459000007656869,
+            "p95": 1.0429000030853786
+          },
+          "indexed_total_ms": {
+            "median": 10.952150001685368,
+            "p95": 11.61100000172155
+          },
+          "reference_ms": {
+            "median": 5.362150001019472,
+            "p95": 6.517300003906712
+          },
+          "scoring_speedup": 0.530344090964555
+        },
+        {
+          "query": "quasar memory",
+          "candidates": 2000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 10.27694999720552,
+            "p95": 11.493300000438467
+          },
+          "formatting_ms": {
+            "median": 1.6287000034935772,
+            "p95": 1.917699999467004
+          },
+          "indexed_total_ms": {
+            "median": 12.064250000548782,
+            "p95": 13.135400004102848
+          },
+          "reference_ms": {
+            "median": 6.259099998715101,
+            "p95": 7.904099998995662
+          },
+          "scoring_speedup": 0.6090425661715838
+        },
+        {
+          "query": "term000 term001",
+          "candidates": 5026,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 23.185050002211938,
+            "p95": 32.06250000221189
+          },
+          "formatting_ms": {
+            "median": 1.5004000015323982,
+            "p95": 1.6486000022268854
+          },
+          "indexed_total_ms": {
+            "median": 24.733649999689078,
+            "p95": 33.52119999908609
+          },
+          "reference_ms": {
+            "median": 10.714900003222283,
+            "p95": 12.3851000025752
+          },
+          "scoring_speedup": 0.46214694392291766
+        },
+        {
+          "query": "doc000000",
+          "candidates": 1,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.06669999856967479,
+            "p95": 0.13049999688519165
+          },
+          "formatting_ms": {
+            "median": 0.09124999996856786,
+            "p95": 0.10649999603629112
+          },
+          "indexed_total_ms": {
+            "median": 0.17314999786322005,
+            "p95": 0.24149999808287248
+          },
+          "reference_ms": {
+            "median": 3.7104499970155302,
+            "p95": 4.802199997357093
+          },
+          "scoring_speedup": 55.62893668040481
+        },
+        {
+          "query": "missingtoken",
+          "candidates": 0,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.023749998945277184,
+            "p95": 0.09950000094249845
+          },
+          "formatting_ms": {
+            "median": 0.000300002284348011,
+            "p95": 0.000400003045797348
+          },
+          "indexed_total_ms": {
+            "median": 0.0259000007645227,
+            "p95": 0.10350000229664147
+          },
+          "reference_ms": {
+            "median": 3.1496500014327466,
+            "p95": 3.7948999961372465
+          },
+          "scoring_speedup": 132.61684805502156
+        },
+        {
+          "query": "system quasar",
+          "candidates": 10000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 23.264299998118076,
+            "p95": 32.10340000077849
+          },
+          "formatting_ms": {
+            "median": 1.7449500010116026,
+            "p95": 1.8933000028482638
+          },
+          "indexed_total_ms": {
+            "median": 25.064500005100854,
+            "p95": 34.222499998577405
+          },
+          "reference_ms": {
+            "median": 13.348650001717033,
+            "p95": 16.189599999052007
+          },
+          "scoring_speedup": 0.573782576857969
+        }
+      ],
+      "documents_per_second": 77.17848838476614,
+      "name": "synthetic-10000"
+    },
+    {
+      "characteristics": {
+        "documents": 50000,
+        "seed": 1729,
+        "min_length": 35,
+        "max_length": 167,
+        "average_length": 100.23354,
+        "tokens": 5011677,
+        "vocabulary_filler": 256,
+        "system_df": 50000,
+        "memory_df": 10000,
+        "quasar_df": 50
+      },
+      "build": {
+        "documents": 50000,
+        "terms": 50259,
+        "postings": 4020223,
+        "tokens": 5011677,
+        "source_bytes": 40023266,
+        "index_bytes": 153997312,
+        "average_length": 100.23354,
+        "timings": {
+          "extraction": 607.8407583999506,
+          "tokenization": 3.446032899824786,
+          "construction": 26.643907999241492,
+          "validation": 30.434575700004643,
+          "publication": 0.0006092000039643608,
+          "total": 689.6398952000018
+        },
+        "issues": []
+      },
+      "open_ms": 0.8349999989150092,
+      "reference_load_ms": 2354.0242000017315,
+      "first_queries": [
+        {
+          "query": "quasar",
+          "open_ms": 2.3980000041774474,
+          "scoring_ms": 0.9478000065428205,
+          "formatting_ms": 1.0040000051958486
+        },
+        {
+          "query": "system",
+          "open_ms": 0.8536999957868829,
+          "scoring_ms": 131.30249999812804,
+          "formatting_ms": 0.9437999979127198
+        },
+        {
+          "query": "memory",
+          "open_ms": 0.8457000003545545,
+          "scoring_ms": 59.07489999663085,
+          "formatting_ms": 0.8329999982379377
+        },
+        {
+          "query": "quasar memory",
+          "open_ms": 0.8224000048357993,
+          "scoring_ms": 59.99980000342475,
+          "formatting_ms": 0.9000999998534098
+        },
+        {
+          "query": "term000 term001",
+          "open_ms": 1.0001999980886467,
+          "scoring_ms": 136.17599999997765,
+          "formatting_ms": 1.5437000038218684
+        },
+        {
+          "query": "doc000000",
+          "open_ms": 1.0418000019853935,
+          "scoring_ms": 0.09889999637380242,
+          "formatting_ms": 0.10699999984353781
+        },
+        {
+          "query": "missingtoken",
+          "open_ms": 0.6617999970330857,
+          "scoring_ms": 0.0335000004270114,
+          "formatting_ms": 0.00029999500839039683
+        },
+        {
+          "query": "system quasar",
+          "open_ms": 0.6246999982977286,
+          "scoring_ms": 135.56100000278093,
+          "formatting_ms": 1.0337999992771074
+        }
+      ],
+      "queries": [
+        {
+          "query": "quasar",
+          "candidates": 50,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.6290500023169443,
+            "p95": 0.8062999986577779
+          },
+          "formatting_ms": {
+            "median": 0.9132500017585699,
+            "p95": 0.9830000053625554
+          },
+          "indexed_total_ms": {
+            "median": 1.5373000023828354,
+            "p95": 1.8133999983547255
+          },
+          "reference_ms": {
+            "median": 14.44410000476637,
+            "p95": 15.96659999631811
+          },
+          "scoring_speedup": 22.961767668015632
+        },
+        {
+          "query": "system",
+          "candidates": 50000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 132.39524999880814,
+            "p95": 141.80969999870285
+          },
+          "formatting_ms": {
+            "median": 0.8739000040804967,
+            "p95": 0.9221000000252388
+          },
+          "indexed_total_ms": {
+            "median": 133.8537500014354,
+            "p95": 143.30250000057276
+          },
+          "reference_ms": {
+            "median": 80.41719999891939,
+            "p95": 88.05600000050617
+          },
+          "scoring_speedup": 0.6074024559011243
+        },
+        {
+          "query": "memory",
+          "candidates": 10000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 56.894049997936236,
+            "p95": 61.32929999876069
+          },
+          "formatting_ms": {
+            "median": 0.806250001915032,
+            "p95": 0.8521999989170581
+          },
+          "indexed_total_ms": {
+            "median": 57.800399998086505,
+            "p95": 62.26510000124108
+          },
+          "reference_ms": {
+            "median": 31.12265000527259,
+            "p95": 32.49869999854127
+          },
+          "scoring_speedup": 0.5470282042920398
+        },
+        {
+          "query": "quasar memory",
+          "candidates": 10000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 57.61184999573743,
+            "p95": 62.20599999505794
+          },
+          "formatting_ms": {
+            "median": 0.9096499998122454,
+            "p95": 1.1759000044548884
+          },
+          "indexed_total_ms": {
+            "median": 58.769149996805936,
+            "p95": 63.471000001300126
+          },
+          "reference_ms": {
+            "median": 35.74030000163475,
+            "p95": 37.38330000487622
+          },
+          "scoring_speedup": 0.6203636926132227
+        },
+        {
+          "query": "term000 term001",
+          "candidates": 25277,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 133.6973500001477,
+            "p95": 143.84249999420717
+          },
+          "formatting_ms": {
+            "median": 1.4407500020752195,
+            "p95": 1.767500005371403
+          },
+          "indexed_total_ms": {
+            "median": 135.45424999756506,
+            "p95": 145.98000000114553
+          },
+          "reference_ms": {
+            "median": 64.10880000112229,
+            "p95": 68.76290000218432
+          },
+          "scoring_speedup": 0.4795068862700081
+        },
+        {
+          "query": "doc000000",
+          "candidates": 1,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.1083999959519133,
+            "p95": 0.3224000029149465
+          },
+          "formatting_ms": {
+            "median": 0.12039999637636356,
+            "p95": 0.13020000187680125
+          },
+          "indexed_total_ms": {
+            "median": 0.23735000286251307,
+            "p95": 0.4478999981074594
+          },
+          "reference_ms": {
+            "median": 20.272450004995335,
+            "p95": 22.14269999967655
+          },
+          "scoring_speedup": 187.01522843218814
+        },
+        {
+          "query": "missingtoken",
+          "candidates": 0,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.04239999907440506,
+            "p95": 0.16940000205067918
+          },
+          "formatting_ms": {
+            "median": 0.0004999965312890708,
+            "p95": 0.0007999988156370819
+          },
+          "indexed_total_ms": {
+            "median": 0.04524999894783832,
+            "p95": 0.17590000061318278
+          },
+          "reference_ms": {
+            "median": 18.591749998449814,
+            "p95": 19.370199996046722
+          },
+          "scoring_speedup": 438.4846793469107
+        },
+        {
+          "query": "system quasar",
+          "candidates": 50000,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 132.9337499992107,
+            "p95": 145.318100003351
+          },
+          "formatting_ms": {
+            "median": 0.9992999985115603,
+            "p95": 1.212100003613159
+          },
+          "indexed_total_ms": {
+            "median": 134.6134500017797,
+            "p95": 147.15059999434743
+          },
+          "reference_ms": {
+            "median": 82.0088000036776,
+            "p95": 95.41760000138311
+          },
+          "scoring_speedup": 0.616914816622299
+        }
+      ],
+      "documents_per_second": 72.50160605267703,
+      "name": "synthetic-50000"
+    },
+    {
+      "characteristics": {
+        "original_generated_notes": true
+      },
+      "build": {
+        "documents": 8,
+        "terms": 247,
+        "postings": 314,
+        "tokens": 406,
+        "source_bytes": 2759,
+        "index_bytes": 36864,
+        "average_length": 50.75,
+        "timings": {
+          "extraction": 0.0920955999972648,
+          "tokenization": 0.0017025999986799434,
+          "construction": 0.008426999986113515,
+          "validation": 0.0036605999994208105,
+          "publication": 0.0007875000010244548,
+          "total": 0.1425946000017575
+        },
+        "issues": []
+      },
+      "open_ms": 0.7851999980630353,
+      "reference_load_ms": 0.24599999596830457,
+      "first_queries": [
+        {
+          "query": "recursive function stack",
+          "open_ms": 1.8755000055534765,
+          "scoring_ms": 0.09370000043418258,
+          "formatting_ms": 0.25269999605370685
+        },
+        {
+          "query": "memory",
+          "open_ms": 0.7508999988203868,
+          "scoring_ms": 0.06299999949987978,
+          "formatting_ms": 0.1993000041693449
+        },
+        {
+          "query": "queue",
+          "open_ms": 0.7847000015317462,
+          "scoring_ms": 0.0703999976394698,
+          "formatting_ms": 0.12549999519251287
+        },
+        {
+          "query": "unicode",
+          "open_ms": 0.7255000018631108,
+          "scoring_ms": 0.062200000684242696,
+          "formatting_ms": 2.303000001120381
+        },
+        {
+          "query": "the",
+          "open_ms": 0.7968999998411164,
+          "scoring_ms": 0.11199999426025897,
+          "formatting_ms": 0.7846000007702969
+        },
+        {
+          "query": "missingtoken",
+          "open_ms": 0.8078000028035603,
+          "scoring_ms": 0.024000000848900527,
+          "formatting_ms": 0.0004999965312890708
+        }
+      ],
+      "queries": [
+        {
+          "query": "recursive function stack",
+          "candidates": 2,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.030949999199947342,
+            "p95": 0.036299999919719994
+          },
+          "formatting_ms": {
+            "median": 0.20194999888190068,
+            "p95": 0.25240000104531646
+          },
+          "indexed_total_ms": {
+            "median": 0.23225000040838495,
+            "p95": 0.28839999868068844
+          },
+          "reference_ms": {
+            "median": 0.01049999991664663,
+            "p95": 0.012500000593718141
+          },
+          "scoring_speedup": 0.33925687198933735
+        },
+        {
+          "query": "memory",
+          "candidates": 2,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.0139499970828183,
+            "p95": 0.1353999978164211
+          },
+          "formatting_ms": {
+            "median": 0.16959999993559904,
+            "p95": 0.2463000055286102
+          },
+          "indexed_total_ms": {
+            "median": 0.18514999828767031,
+            "p95": 0.35170000046491623
+          },
+          "reference_ms": {
+            "median": 0.006050002411939204,
+            "p95": 0.015600002370774746
+          },
+          "scoring_speedup": 0.4336920198636292
+        },
+        {
+          "query": "queue",
+          "candidates": 1,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.01134999911300838,
+            "p95": 0.028700000257231295
+          },
+          "formatting_ms": {
+            "median": 0.08580000212532468,
+            "p95": 0.10800000018207356
+          },
+          "indexed_total_ms": {
+            "median": 0.09819999831961468,
+            "p95": 0.12579999747686088
+          },
+          "reference_ms": {
+            "median": 0.005399997462518513,
+            "p95": 0.006200003554113209
+          },
+          "scoring_speedup": 0.4757707387245085
+        },
+        {
+          "query": "unicode",
+          "candidates": 1,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.010700001439545304,
+            "p95": 0.013799995940644294
+          },
+          "formatting_ms": {
+            "median": 0.09385000157635659,
+            "p95": 0.20149999909335747
+          },
+          "indexed_total_ms": {
+            "median": 0.10635000217007473,
+            "p95": 0.21529999503400177
+          },
+          "reference_ms": {
+            "median": 0.004500001523410901,
+            "p95": 0.006000002031214535
+          },
+          "scoring_speedup": 0.4205608334574326
+        },
+        {
+          "query": "the",
+          "candidates": 7,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.022150004951981828,
+            "p95": 0.048800000513438135
+          },
+          "formatting_ms": {
+            "median": 0.6233999956748448,
+            "p95": 0.7721000001765788
+          },
+          "indexed_total_ms": {
+            "median": 0.646799999231007,
+            "p95": 0.817699998151511
+          },
+          "reference_ms": {
+            "median": 0.010449999535921961,
+            "p95": 0.01960000372491777
+          },
+          "scoring_speedup": 0.4717831692848885
+        },
+        {
+          "query": "missingtoken",
+          "candidates": 0,
+          "agreement": true,
+          "indexed_scoring_ms": {
+            "median": 0.006499998562503606,
+            "p95": 0.012600001355167478
+          },
+          "formatting_ms": {
+            "median": 0.000300002284348011,
+            "p95": 0.000400003045797348
+          },
+          "indexed_total_ms": {
+            "median": 0.00790000194683671,
+            "p95": 0.014700002793688327
+          },
+          "reference_ms": {
+            "median": 0.0036999990697950125,
+            "p95": 0.0046000059228390455
+          },
+          "scoring_speedup": 0.569230752009564
+        }
+      ],
+      "documents_per_second": 56.103106288045964,
+      "name": "demo"
+    }
+  ],
+  "finished_at_utc": "2026-10-13T09:59:23.426599+00:00",
+  "notes": [
+    "The 1,000-document case was measured in a separate run after the main run. The 10,000/50,000/demo cases use the main run; all cases use identical settings."
+  ],
+  "small_run_measured_at_utc": "2026-10-13T09:57:32.635134+00:00",
+  "index_configuration": {
+    "schema_version": 1,
+    "tokenizer": {
+      "version": 1,
+      "normalization": "NFKC-casefold-NFC",
+      "pattern": "[^\\W_]+"
+    },
+    "ranking": {
+      "k1": 1.2,
+      "b": 0.75
+    }
+  },
+  "sqlite_read_settings": {
+    "cache_size": -2000,
+    "page_size": 4096,
+    "journal_mode": "delete"
+  },
+  "raw_samples": 600,
+  "raw_csv_sha256": "ca613375da819e20996fadaa401222f0b94579f0497d25a18ffc24b95d91ecec"
+}
